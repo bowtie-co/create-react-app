@@ -71,6 +71,8 @@ module.exports = (resolve, rootDir, isEjecting) => {
   }
   const overrides = Object.assign({}, require(paths.appPackageJson).jest, require(path.join(paths.appConfig, 'jest')));
   const supportedKeys = [
+    'browser',
+    'moduleNameMapper',
     'collectCoverageFrom',
     'coverageReporters',
     'coverageThreshold',
