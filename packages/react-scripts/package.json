@@ -1,6 +1,6 @@
 {
   "name": "@bowtie/react-scripts",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Bowtie configuration and scripts for Create React App",
   "repository": "bowtie-co/create-react-app",
   "license": "MIT",
