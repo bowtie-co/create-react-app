@@ -8,6 +8,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const chalk = require('chalk');
 const paths = require('../../config/paths');
 
@@ -68,7 +69,7 @@ module.exports = (resolve, rootDir, isEjecting) => {
   if (rootDir) {
     config.rootDir = rootDir;
   }
-  const overrides = Object.assign({}, require(paths.appPackageJson).jest);
+  const overrides = Object.assign({}, require(paths.appPackageJson).jest, require(path.join(paths.appConfig, 'jest')));
   const supportedKeys = [
     'collectCoverageFrom',
     'coverageReporters',
